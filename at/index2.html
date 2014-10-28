@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Beer Map - Austria</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' >
+
+  <script src='http://code.jquery.com/jquery-2.1.1.min.js'></script>    
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
+  <style>
+  
+  body {
+    /*  background: #404040;  lime;  change later; for debugging */  
+    margin:0;
+    padding:0;
+  }
+  
+     /* NOTE: use 80% for width  - 20% used by sidebar (markerlist) */
+#map { position:absolute;
+       top:0;
+       bottom:0;
+       left: 33.3333%%;
+       width:66.6666%; }
+
+
+ #sidebar {
+     position: absolute;
+     top:0; left:0;
+     width: 33.3333%;
+     height: 100%;
+     /* overflow:hidden;  */
+     border-right:1px solid rgba(0,0,0,0.25);
+ }
+ 
+ #marker-list {
+/*
+      position:absolute;
+      top:0; left:0; width:20%;
+      bottom:0;
+      overflow-x:auto;
+      background:#fff;
+      margin:0;
+      padding:5px;
+*/
+/*
+      height:100%;
+      overflow:auto;
+*/
+      padding-bottom: 60px;
+  }
+
+  #marker-list li {
+      padding:5px;
+      margin:0;
+      list-style-type:none;
+  }
+  #marker-list li:hover {
+      background:#eee;
+  }
+  
+  
+  #marker-list li .key {
+ /*      display: inline-block;  */
+      font-size: 60%;
+      font-weight: bold;
+  }
+
+  #marker-list li .key-small {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: bold;
+      background-color:  #ffd700;   /* gold (yellow-ish */
+      color: #000;
+      padding: 4px;
+      border-radius: 50%;
+  }
+  #marker-list li .key-medium {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: bold;
+      background-color: #0000ff;  /* blue */
+      color: #fff;
+      padding: 4px;
+      border-radius: 50%;
+  }
+  #marker-list li .key-large {
+      display: inline-block;  
+      font-size: 10px;
+      font-weight: bold;
+      background-color: #ff0000;  /* red */
+      color: #fff;
+      padding: 4px;
+      border-radius: 50%;
+  }
+
+
+  #marker-list li .desc {
+      font-size: 60%;
+      color: grey;
+  }
+
+
+.count-icon-large {
+  background-color: #ff0000;    /* red */
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 40px;
+  }
+
+.count-icon-medium {
+  background-color: #0000ff;  /* blue */
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 30px;
+  }
+
+/*
+ use different color for microbrewery vs brewpub ??
+   e.g. orange ->  ffa5000;
+ */
+
+ 
+.count-icon-small {
+  /* border: 5px solid rgba(255,255,255,0.5);    */
+  background-color: #ffd700;   /* gold (yellow-ish */
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 10px;
+  line-height: 20px;
+  }
+
+  
+  </style>
+</head>
+<body>
+
+  <div id='sidebar'>
+    <div id='sidebar-header'></div>
+    <div id='sidebar-content'>
+       <ul id='marker-list'></ul>
+    </div>
+  </div>
+
+  <div id='map'></div>
+
+
+<script>
+// read in JSON files
+function readJSON( url, success ) {
+  $.get( url, function( data ) {
+       console.log( "readJSON success");
+       console.log( "type: " + typeof data );
+       // console.log( data );
+       
+       if( typeof data == 'string' ) {
+         // convert data to json if returned as "plain" text
+         data = JSON.parse( data );
+       }
+       success( data );
+  });
+};
+
+// load in GeoJSON data
+var atUrl = 'at.geojson';
+var nUrl  = 'n.geojson';
+
+var sidebarHeader = document.getElementById('sidebar-header');
+var markerList = document.getElementById('marker-list');
+
+L.mapbox.accessToken = 'pk.eyJ1IjoiZ2VyYWxkYmF1ZXIiLCJhIjoic091TFBNOCJ9.LV4KlBAqm0thFqeW60cwEQ';
+var map = L.mapbox.map('map', 'examples.map-i86nkdio', { scrollWheelZoom: false })
+              .setView([47.2000338, 13.199959], 7);   // use 7 for austria / 8 for province
+
+//////////////////////
+// center points:
+//    austria:  47.2000338, 13.199959
+//     n: 48.2817813, 15.7632457             
+
+
+// -  pan on click
+// - show popup on hover
+
+readJSON( atUrl, function( json ) {
+  console.log( "before setGeoJSON" );
+  map.featureLayer.setGeoJSON( json );
+  console.log( "after setGeoJSON" );
+
+map.featureLayer.on('mouseover', function(e) {
+    e.layer.openPopup();
+});
+map.featureLayer.on('mouseout', function(e) {
+    e.layer.closePopup();
+});
+
+    map.featureLayer.on('click', function(e) {
+        // check zoom level before setZoom
+        console.log( "map.getZoom():" + map.getZoom());
+        if( map.getZoom() < 10 ) {
+          map.setZoom( 10 );
+        }
+        map.panTo(e.layer.getLatLng());
+    });
+
+     // first entry - Austria Overview (for "reset" zoom level and center)  
+
+     var p = sidebarHeader.appendChild(document.createElement('p'));
+     p.innerHTML = "Austria (Overview)";
+     p.onclick = function() {
+       map.setView([47.2000338, 13.199959], 7);
+     };
+  
+      var i=0;
+      map.featureLayer.eachLayer( function(layer) {
+          i+=1;
+
+         var markerSize = layer.toGeoJSON().properties['marker-size'];
+
+         var keyClassName = null;
+         if( markerSize == 'small' ) {
+            keyClassName = 'key-small';
+         } else if( markerSize == 'medium' ) {
+            keyClassName = 'key-medium';
+         } else if ( markerSize == 'large') {
+            keyClassName = 'key-large';
+         } else {
+            // undefined; use small
+            keyClassName = 'key-small';
+         }
+
+          var item = markerList.appendChild(document.createElement('li'));
+          item.innerHTML = "<span class='"+ keyClassName +"'>"+i + "</span> "
+                             + layer.toGeoJSON().properties.title
+                             + "<br><span class='desc'>" + layer.toGeoJSON().properties.description + "</span>";
+          console.log( "layer marker item:" + layer.toGeoJSON().properties.title);
+        
+         
+         var iconSize = null;
+         var iconClassName = null;
+
+         if( markerSize == 'small' ) {
+            iconClassName = 'count-icon-small';
+            iconSize = [20,20];
+         } else if( markerSize == 'medium' ) {
+            iconClassName = 'count-icon-medium';
+            iconSize = [30,30];
+         } else if ( markerSize == 'large') {
+            iconClassName = 'count-icon-large';
+            iconSize = [40,40];
+         } else {
+            // undefined; use small
+            iconClassName = 'count-icon-small';
+            iconSize = [20,20];
+         }
+          
+          layer.setIcon( L.divIcon({
+            // Specify a class name we can refer to in CSS.
+            className: iconClassName,
+            // Define what HTML goes in each marker.
+            html: ""+i,
+            // Set a markers width and height.
+            iconSize: iconSize
+             }));
+          
+          item.onclick = function() {
+        // check zoom level before setZoom
+             var mapZoom = map.getZoom();
+             if( mapZoom < 10 ) {   // zoom in if clicked (and not alreay zoomed in)
+               mapZoom = 10;
+             }
+             map.setView(layer.getLatLng(), mapZoom);
+             layer.openPopup();
+          };
+      });
+
+});
+
+</script>
+</body>
+</html>
