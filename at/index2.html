@@ -157,6 +157,29 @@
 
 
 <script>
+
+function sortCompare( l, r ) {
+  return (l < r) ? -1 : (l > r) ? 1 : 0;
+}
+
+var AT_STATES = {};  // NOTE: use AT NUTS sort order for states
+AT_STATES['Burgenland'] = 11;
+AT_STATES['Niederösterreich'] = 12;
+AT_STATES['Wien'] = 13;
+AT_STATES['Kärnten'] = 21;
+AT_STATES['Steiermark'] = 22;
+AT_STATES['Oberösterreich'] = 31;
+AT_STATES['Salzburg'] = 32;
+AT_STATES['Tirol'] = 33;
+AT_STATES['Vorarlberg'] = 34;
+
+var BREWERY_SIZES = {};
+BREWERY_SIZES['berwery (l)'] = 1;
+BREWERY_SIZES['brewery (m)'] = 2;
+BREWERY_SIZES['brewery'] = 3;
+BREWERY_SIZES['brewpub'] = 4;
+
+
 // read in JSON files
 function readJSON( url, success ) {
   $.get( url, function( data ) {
@@ -168,6 +191,44 @@ function readJSON( url, success ) {
          // convert data to json if returned as "plain" text
          data = JSON.parse( data );
        }
+  
+////
+// sort geojson features
+//   by 1) state
+//   by 2/ size (brewery)
+//   by 3/ title       
+
+        var features = data['features'];
+        console.log( "features.length:" + features.length );
+        
+        features.sort( function(l,r) {
+           l_state = l['properties']['state'];
+           l_state_num = AT_STATES[ l_state ];
+           l_type  = l['properties']['type'];
+           l_type_num = BREWERY_SIZES[ l_type ];
+           l_title = l['properties']['title'];
+           
+           r_state = r['properties']['state'];
+           r_state_num = AT_STATES[ r_state ];
+           r_type  = r['properties']['type'];
+           r_type_num = BREWERY_SIZES[ r_type ];
+           r_title = r['properties']['title'];
+
+           // console.log( l_state + " " +l_state_num + "<=>" + r_state_num + " " + r_state );
+           // console.log( l_type + " " +l_type_num + "<=>" + r_type_num + " " + r_type );
+
+           var value = sortCompare( l_state_num, r_state_num );
+           if( value == 0 ) {
+              value = sortCompare( l_type_num, r_type_num );
+              if( value == 0 ) {
+                value = sortCompare( l_title, r_title );
+              }
+           }
+           return value;   
+        });
+        
+      data['features'] = features;  // just make sure to use sorted array (got sorted in-place)
+
        success( data );
   });
 };
@@ -222,8 +283,19 @@ map.featureLayer.on('mouseout', function(e) {
      };
   
       var i=0;
+     var lastState = null;
+      
       map.featureLayer.eachLayer( function(layer) {
           i+=1;
+
+          var state = layer.toGeoJSON().properties['state'];
+          if( lastState !== state ) {
+            // add state header
+            //   todo: add click handler to use centroid point for state!!!!
+            var item = markerList.appendChild(document.createElement('li'));
+            item.innerHTML = state;
+            lastState = state;
+          }
 
          var markerSize = layer.toGeoJSON().properties['marker-size'];
 
