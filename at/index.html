@@ -5,122 +5,24 @@
   <title>Beer Map - Austria</title>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' >
 
-  <script src='http://code.jquery.com/jquery-2.1.1.min.js'></script>    
+  <!-- core mapbox.js includes -->
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet'>
   <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
-  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
-  <style>
-     body { margin:0; padding:0; }
-     /* NOTE: use 80% for width  - 20% used by sidebar (markerlist) */
-     #map { position:absolute; top:0; bottom:0; width:80%; }
 
+  <!-- use 3rd party libs -->
+  <script src='http://code.jquery.com/jquery-2.1.1.min.js'></script>
 
- #marker-list {
-      position:absolute;
-      top:0; right:0; width:20%;
-      bottom:0;
-      overflow-x:auto;
-      background:#fff;
-      margin:0;
-      padding:5px;
-  }
-  #marker-list li {
-      padding:5px;
-      margin:0;
-      list-style-type:none;
-  }
-  #marker-list li:hover {
-      background:#eee;
-  }
-  </style>
+  <!-- our own code -->
+  <link href='css/beermap.css' rel='stylesheet'>
+  <script src='js/beermap.js'></script>
 </head>
 <body>
   <div id='map'></div>
   <ul id='marker-list'></ul>
-<script>
-// read in JSON files
-function readJSON( url, success ) {
-  $.get( url, function( data ) {
-       console.log( "readJSON success");
-       console.log( "type: " + typeof data );
-       // console.log( data );
-       
-       if( typeof data == 'string' ) {
-         // convert data to json if returned as "plain" text
-         data = JSON.parse( data );
-       }
-       success( data );
-  });
-};
 
-// load in GeoJSON data
-var atUrl = 'at.geojson';
-var nUrl  = 'n.geojson';
 
-var markerList = document.getElementById('marker-list');
-
-L.mapbox.accessToken = 'pk.eyJ1IjoiZ2VyYWxkYmF1ZXIiLCJhIjoic091TFBNOCJ9.LV4KlBAqm0thFqeW60cwEQ';
-var map = L.mapbox.map('map', 'examples.map-i86nkdio')
-              .setView([47.2000338, 13.199959], 7);   // use 7 for austria / 8 for province
-
-//////////////////////
-// center points:
-//    austria:  47.2000338, 13.199959
-//     n: 48.2817813, 15.7632457             
-
-/*
- map.featureLayer.on('ready', function(e) {
-      console.log( "layer ready");
-      map.featureLayer.eachLayer( function(layer) {
-          var item = markerList.appendChild(document.createElement('li'));
-          item.innerHTML = layer.toGeoJSON().properties.title;
-          console.log( "layer marker item:" + layer.toGeoJSON().properties.title);
-          item.onclick = function() {
-             map.setView(layer.getLatLng(), 7);
-             layer.openPopup();
-          };
-      });
-  });
-*/
-
-// todo: pan on click!!!
-//   show popup on hover!!!
-
-readJSON( atUrl, function( json ) {
-  console.log( "before setGeoJSON" );
-  map.featureLayer.setGeoJSON( json );
-  console.log( "after setGeoJSON" );
-
-map.featureLayer.on('mouseover', function(e) {
-    e.layer.openPopup();
-});
-map.featureLayer.on('mouseout', function(e) {
-    e.layer.closePopup();
-});
-
-    map.featureLayer.on('click', function(e) {
-        map.panTo(e.layer.getLatLng());
-    });
-
-     // first entry - Austria Overview (for "reset" zoom level and center)  
-  
-     var item = markerList.appendChild(document.createElement('li'));
-     item.innerHTML = "Austria (Overview)";
-     item.onclick = function() {
-       map.setView([47.2000338, 13.199959], 7);
-     };
-  
-      map.featureLayer.eachLayer( function(layer) {
-          var item = markerList.appendChild(document.createElement('li'));
-          item.innerHTML = layer.toGeoJSON().properties.title;
-          console.log( "layer marker item:" + layer.toGeoJSON().properties.title);
-          item.onclick = function() {
-             map.setView(layer.getLatLng(), 10);
-             layer.openPopup();
-          };
-      });
-
-});
-
-</script>
+  <script>
+    var map = BeerMap.create();
+  </script>
 </body>
 </html>
