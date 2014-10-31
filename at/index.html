@@ -13,16 +13,18 @@
   <script src='http://code.jquery.com/jquery-2.1.1.min.js'></script>
 
   <!-- our own code -->
-  <link href='css/beermap.css' rel='stylesheet'>
-  <script src='js/beermap.js'></script>
+  <link href='../css/beermap.css' rel='stylesheet'>
+  <script src='../js/beermap.js'></script>
+  <script src='../js/world.js'></script>
+
+  <script>
+     $(document).ready( function() {
+        var map = BeerMap.create( { place: AT, url: 'at.geojson' });
+     });
+  </script>
 </head>
 <body>
   <div id='map'></div>
-  <ul id='marker-list'></ul>
-
-
-  <script>
-    var map = BeerMap.create();
-  </script>
+  <ul id='brewery-list'></ul>
 </body>
 </html>
