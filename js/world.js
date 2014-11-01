@@ -26,7 +26,7 @@ var AT = {
 var BE = {
   title: 'Belgium',
   latLng: [50.6407351, 4.66696],
-  zoom:    7,   // default zoom level (for overview) e.g.  use 7 for austria
+  zoom:    8,   // default zoom level (for overview)
 
   states: {  // NOTE: use BE NUTS sort order for states
     'Bruxelles': 10,
