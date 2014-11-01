@@ -22,3 +22,15 @@ var AT = {
   }
 };
 
+
+// NOTE: for now "turn" bayern (by) into a country
+//  - fix: make more generic e.g. use DE.BY - why? why not?
+var BY = {
+  title: 'Bayern [Baviria]',
+  latLng: [48.9467562, 11.4038717],
+  zoom:    7,   // default zoom level (for overview) e.g.  use 7 for austria
+  states: {  // FIX: use Oberbayern, Oberfranken, etc.
+    'Bayern': 1,
+  }  
+}
+
