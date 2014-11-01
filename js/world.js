@@ -23,6 +23,27 @@ var AT = {
 };
 
 
+var BE = {
+  title: 'Belgium',
+  latLng: [50.6407351, 4.66696],
+  zoom:    7,   // default zoom level (for overview) e.g.  use 7 for austria
+
+  states: {  // NOTE: use BE NUTS sort order for states
+    'Bruxelles': 10,
+    'Antwerpen': 21,
+    'Limburg': 22,
+    'Oost-Vlaanderen': 23,
+    'Vlaams-Brabant': 24,
+    'West-Vlaanderen': 25,
+    'Brabant Wallon': 31,
+    'Hainaut': 32,
+    'Liège': 33,
+    'Luxembourg': 34,
+    'Namur': 35, 
+  }
+};
+
+
 // NOTE: for now "turn" bayern (by) into a country
 //  - fix: make more generic e.g. use DE.BY - why? why not?
 var BY = {
@@ -32,5 +53,5 @@ var BY = {
   states: {  // FIX: use Oberbayern, Oberfranken, etc.
     'Bayern': 1,
   }  
-}
+};
 
