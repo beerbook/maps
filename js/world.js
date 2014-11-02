@@ -22,6 +22,28 @@ var AT = {
   }
 };
 
+var CZ = {
+  title: 'Czech Republic',
+  latLng: [49.8167003, 15.4749544],
+  zoom:    7,   // default zoom level (for overview)
+
+  states: {  // fix: use NUTS codes; add missing kraj
+   'Praha': 1,
+   'Střední Čechy': 2,
+   'Jižní Čechy': 3,
+   'Plzeň': 4,
+   'Karlovy Vary': 5,
+   'Ústí nad Labem': 6,
+   'Liberec': 7,
+   'Pardubice': 8,
+   'Jižní Morava': 9,
+   'Vysočina': 10,
+   'Olomouc': 11,
+   'Zlín': 12,
+   'Moravskoslezsko': 13
+  }
+};
+
 
 var BE = {
   title: 'Belgium',

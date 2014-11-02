@@ -1,0 +1,725 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.2681123,
+          49.9486561
+        ]
+      },
+      "properties": {
+        "title": "Pivovar Kutná Hora (Heineken)",
+        "description": "U Lorce 11 // 284 15 Kutná Hora",
+        "city": "Kutná Hora",
+        "state": "Střední Čechy",
+        "web": null,
+        "type": "brewery",
+        "marker-color": "#008000",
+        "marker-size": "small"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0417306,
+          50.186331
+        ]
+      },
+      "properties": {
+        "title": "Pivovar Nymburk",
+        "description": "Pražská 581 // 288 25  Nymburk",
+        "city": "Nymburk",
+        "state": "Střední Čechy",
+        "web": "www.postriziny.cz",
+        "type": "brewery (m)",
+        "marker-color": "#0000ff",
+        "marker-size": "medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.3897618,
+          49.6176522
+        ]
+      },
+      "properties": {
+        "title": "Lobkowiczký Pivovar Vysoký Chlumec",
+        "description": "Vysoký Chlumec // 262 52  Vysoký Chlumec",
+        "city": "Vysoký Chlumec",
+        "state": "Střední Čechy",
+        "web": "www.lobkowicz.cz",
+        "type": "brewery (m)",
+        "marker-color": "#0000ff",
+        "marker-size": "medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.9447205,
+          50.5234076
+        ]
+      },
+      "properties": {
+        "title": "Pivovar Klášter (Pivovary Lobkowicz)",
+        "description": "294 15 Klášter Hradiště nad Jizerou //",
+        "city": "Klášter Hradiště nad Jizerou",
+        "state": "Střední Čechy",
+        "web": "www.pivovarklaster.cz",
+        "type": "brewery (m)",
+        "marker-color": "#0000ff",
+        "marker-size": "medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.6393438,
+          49.9225185
+        ]
+      },
+      "properties": {
+        "title": "Pivovar Velké Popovice (SAB Miller)",
+        "description": "Ringhofferova 1 // 251 69  Velké Popovice",
+        "city": "Velké Popovice",
+        "state": "Střední Čechy",
+        "web": "www.beer-kozel.cz",
+        "type": "berwery (l)",
+        "marker-color": "#ff0000",
+        "marker-size": "large"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7760239,
+          50.1717945
+        ]
+      },
+      "properties": {
+        "title": "Královský Pivovar Krušovice (Heineken)",
+        "description": "270 53 Krušovice //",
+        "city": "Krušovice",
+        "state": "Střední Čechy",
+        "web": "www.krusovice.cz",
+        "type": "berwery (l)",
+        "marker-color": "#ff0000",
+        "marker-size": "large"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.3151514,
+          48.8111744
+        ]
+      },
+      "properties": {
+        "title": "Pivovar Eggenberg",
+        "description": "Latrán 27 // 381 01  Český Krumlov",
+        "city": "Český Krumlov",
+        "state": "Jižní Čechy",
+        "web": "www.eggenberg.cz",
+        "type": "brewery (m)",
+        "marker-color": "#0000ff",
+        "marker-size": "medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.2159645,
+          49.2000186
+        ]
+      },
+      "properties": {
+        "title": "Městský Pivovar Platan",
+        "description": "Pivovarská 168 // 389 12  Protivín",
+        "city": "Protivín",
+        "state": "Jižní Čechy",
+        "web": "www.pivo-platan.cz",
+        "type": "brewery (m)",
+        "marker-color": "#0000ff",
+        "marker-size": "medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.7705955,
+          49.0039052
+        ]
+      },
+      "properties": {
+        "title": "Bohemia Regent",
+        "description": "Trocnovské nám. 124 // 379 14  Třeboň",
+        "city": "Třeboň",
+        "state": "Jižní Čechy",
+        "web": "www.pivovar-regent.cz",
+        "type": "brewery (m)",
+        "marker-color": "#0000ff",
+        "marker-size": "medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9023123,
+          49.2616735
+        ]
+      },
+      "properties": {
+        "title": "Měšťanský Pivovar Strakonice",
+        "description": "Podskalského 324 // 386 19  Strakonice",
+        "city": "Strakonice",
+        "state": "Jižní Čechy",
+        "web": "www.pivovar-strakonice.cz",
+        "type": "brewery (m)",
+        "marker-color": "#0000ff",
+        "marker-size": "medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.474285,
+          48.9747357
+        ]
+      },
+      "properties": {
+        "title": "Budějovický Budvar [Budweiser Budvar Brewery]",
+        "description": "Karoliny Světlé 4 // 370 21  České Budějovice",
+        "city": "České Budějovice",
+        "state": "Jižní Čechy",
+        "web": "www.budvar.cz",
+        "type": "berwery (l)",
+        "marker-color": "#ff0000",
+        "marker-size": "large"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.7301402,
+          49.8932112
+        ]
+      },
+      "properties": {
+        "title": "Chodovar",
+        "description": "Pivovarská 107 // 348 13  Chodová Planá",
+        "city": "Chodová Planá",
+        "state": "Plzeň",
+        "web": "www.chodovar.cz",
+        "type": "brewery (m)",
+        "marker-color": "#0000ff",
+        "marker-size": "medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3775249,
+          49.7477415
+        ]
+      },
+      "properties": {
+        "title": "Plzeňský Prazdroj (SAB Miller) [Pilsner Urquell Brewery]",
+        "description": "U Prazdroje 7 // 304 97  Plzeň",
+        "city": "Plzeň",
+        "state": "Plzeň",
+        "web": "www.pilsner-urquell.cz",
+        "type": "berwery (l)",
+        "marker-color": "#ff0000",
+        "marker-size": "large"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3775249,
+          49.7477415
+        ]
+      },
+      "properties": {
+        "title": "Pivovar Gambrinus (SAB Miller)",
+        "description": "U Prazdroje 7 // 304 97  Plzeň",
+        "city": "Plzeň",
+        "state": "Plzeň",
+        "web": "www.gambrinus.cz",
+        "type": "berwery (l)",
+        "marker-color": "#ff0000",
+        "marker-size": "large"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5457107,
+          50.3274358
+        ]
+      },
+      "properties": {
+        "title": "Žatecký Pivovar",
+        "description": "Žižkovo náměstí 81 // 438 01 Žatec",
+        "city": "Žatec",
+        "state": "Ústí nad Labem",
+        "web": "www.zateckypivovar.cz",
+        "type": "brewery",
+        "marker-color": "#008000",
+        "marker-size": "small"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0408798,
+          50.6684322
+        ]
+      },
+      "properties": {
+        "title": "Pivovar Krásné Březno (Heineken)",
+        "description": "Drážďanská 80 // 401 73  Ústí nad Labem",
+        "city": "Ústí nad Labem",
+        "state": "Ústí nad Labem",
+        "web": "www.zlatopramen.cz",
+        "type": "brewery (m)",
+        "marker-color": "#0000ff",
+        "marker-size": "medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.1417394,
+          50.662703
+        ]
+      },
+      "properties": {
+        "title": "Pivovar Velké Březno (Heineken)",
+        "description": "Pivovarská 116 // 403 23  Velké Březno",
+        "city": "Velké Březno",
+        "state": "Ústí nad Labem",
+        "web": null,
+        "type": "brewery (m)",
+        "marker-color": "#0000ff",
+        "marker-size": "medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7966137,
+          50.3572555
+        ]
+      },
+      "properties": {
+        "title": "Pivovar Louny (Heineken)",
+        "description": "Říční 633 // 440 85 Louny",
+        "city": "Louny",
+        "state": "Ústí nad Labem",
+        "web": null,
+        "type": "brewery (m)",
+        "marker-color": "#0000ff",
+        "marker-size": "medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0583947,
+          50.7702648
+        ]
+      },
+      "properties": {
+        "title": "Pivovar Vratislavice",
+        "description": "Pivovarská 164 // 463 11  Liberec 30",
+        "city": "Liberec",
+        "state": "Liberec",
+        "web": "www.pivo-konrad.cz",
+        "type": "brewery",
+        "marker-color": "#008000",
+        "marker-size": "small"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.083897,
+          50.5781315
+        ]
+      },
+      "properties": {
+        "title": "Pivovar Svijany",
+        "description": "Svijany č.p.25 // 463 46 Příšovice // 463 46 Svijany",
+        "city": "Příšovice",
+        "state": "Liberec",
+        "web": "www.pivovarsvijany.cz",
+        "type": "brewery (m)",
+        "marker-color": "#0000ff",
+        "marker-size": "medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.7765409,
+          50.0410187
+        ]
+      },
+      "properties": {
+        "title": "Pivovar Pardubice",
+        "description": "Palackého 250 // 530 33  Pardubice",
+        "city": "Pardubice",
+        "state": "Pardubice",
+        "web": "www.pernstejn.cz",
+        "type": "brewery (m)",
+        "marker-color": "#0000ff",
+        "marker-size": "medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.2653869,
+          49.7149137
+        ]
+      },
+      "properties": {
+        "title": "Měšťanský pivovar v Poličce",
+        "description": "Pivovarská 151 // 572 14  Polička",
+        "city": "Polička",
+        "state": "Pardubice",
+        "web": "www.pivovar-policka.cz",
+        "type": "brewery (m)",
+        "marker-color": "#0000ff",
+        "marker-size": "medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.9046170193054,
+          49.7631096
+        ]
+      },
+      "properties": {
+        "title": "Pivovar Rychtář (Pivovary Lobkowicz)",
+        "description": "Resslova 260 // 539 01  Hlinsko v Čechách",
+        "city": "Hlinsko v Čechách",
+        "state": "Pardubice",
+        "web": "www.rychtar.cz",
+        "type": "brewery (m)",
+        "marker-color": "#0000ff",
+        "marker-size": "medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.9994446,
+          49.2778194
+        ]
+      },
+      "properties": {
+        "title": "Pivovar Vyškov",
+        "description": "Čsl. armády 116/4 // 682 11  Vyškov",
+        "city": "Vyškov",
+        "state": "Jižní Morava",
+        "web": "www.pivovyskov.cz",
+        "type": "brewery",
+        "marker-color": "#008000",
+        "marker-size": "small"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.0489457,
+          48.8554341
+        ]
+      },
+      "properties": {
+        "title": "Pivovar Hostan (Heineken)",
+        "description": "Hradní 2 // 669 28  Znojmo",
+        "city": "Znojmo",
+        "state": "Jižní Morava",
+        "web": "www.hostan.cz",
+        "type": "brewery (m)",
+        "marker-color": "#0000ff",
+        "marker-size": "medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6113382,
+          49.1922443
+        ]
+      },
+      "properties": {
+        "title": "Pivovar Starobrno (Heineken) [Starobrno Brewery]",
+        "description": "Hlinky 12 // 661 47  Brno",
+        "city": "Brno",
+        "state": "Jižní Morava",
+        "web": "www.starobrno.com",
+        "type": "berwery (l)",
+        "marker-color": "#ff0000",
+        "marker-size": "large"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.3586709,
+          49.5418861
+        ]
+      },
+      "properties": {
+        "title": "Bernard Pivo",
+        "description": "5. května 1 // 396 01  Humpolec",
+        "city": "Humpolec",
+        "state": "Vysočina",
+        "web": "www.bernard.cz",
+        "type": "brewery (m)",
+        "marker-color": "#0000ff",
+        "marker-size": "medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.5806362,
+          49.6081171
+        ]
+      },
+      "properties": {
+        "title": "Měšťanský Pivovar Havlíčkův Brod",
+        "description": "Dobrovského 2027 // 580 01  Havlíčkův Brod",
+        "city": "Havlíčkův Brod",
+        "state": "Vysočina",
+        "web": "www.hbrebel.cz",
+        "type": "brewery (m)",
+        "marker-color": "#0000ff",
+        "marker-size": "medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.5903065,
+          49.396064
+        ]
+      },
+      "properties": {
+        "title": "Pivovar a sodovkárna Jihlava (Pivovary Lobkowicz)",
+        "description": "Vrchlického 2 // 586 01  Jihlava",
+        "city": "Jihlava",
+        "state": "Vysočina",
+        "web": "www.pivovar-jihlava.cz",
+        "type": "brewery (m)",
+        "marker-color": "#0000ff",
+        "marker-size": "medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.9347166,
+          50.0784174
+        ]
+      },
+      "properties": {
+        "title": "Pivovar Holba (PMS a.s. Přerov)",
+        "description": "Pivovarská 261 // 788 33 Hanušovice",
+        "city": "Hanušovice",
+        "state": "Olomouc",
+        "web": "www.holba.cz",
+        "type": "brewery (m)",
+        "marker-color": "#0000ff",
+        "marker-size": "medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.4508621,
+          49.4553775
+        ]
+      },
+      "properties": {
+        "title": "Pivovar Zubr (PMS a.s. Přerov)",
+        "description": "Komenského 35 // 750 51 Přerov",
+        "city": "Přerov",
+        "state": "Olomouc",
+        "web": "www.zubr.cz",
+        "type": "brewery (m)",
+        "marker-color": "#0000ff",
+        "marker-size": "medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.0761064,
+          49.7014789
+        ]
+      },
+      "properties": {
+        "title": "Pivovar Litovel (PMS a.s. Přerov)",
+        "description": "Palackého 934 // 784 05  Litovel",
+        "city": "Litovel",
+        "state": "Olomouc",
+        "web": "www.litovel.cz",
+        "type": "brewery (m)",
+        "marker-color": "#0000ff",
+        "marker-size": "medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.6464437,
+          49.0253139
+        ]
+      },
+      "properties": {
+        "title": "Pivovar Janáček (Pivovary Lobkowicz)",
+        "description": "Neradice 369 // 688 16 Uherský Brod",
+        "city": "Uherský Brod",
+        "state": "Zlín",
+        "web": "www.pivovar-janacek.cz",
+        "type": "brewery (m)",
+        "marker-color": "#0000ff",
+        "marker-size": "medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.2820084,
+          49.8349139
+        ]
+      },
+      "properties": {
+        "title": "Pivovar Ostravar",
+        "description": "Hornopolní 57 // 728 25  Ostrava 1",
+        "city": "Ostrava",
+        "state": "Moravskoslezsko",
+        "web": "www.ostravar.cz",
+        "type": "brewery (m)",
+        "marker-color": "#0000ff",
+        "marker-size": "medium"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.426381,
+          49.6606723
+        ]
+      },
+      "properties": {
+        "title": "Pivovar Radegast (SAB Miller)",
+        "description": "Nošovice // 739 51  Nošovice",
+        "city": "Nošovice",
+        "state": "Moravskoslezsko",
+        "web": "www.radegast.cz",
+        "type": "berwery (l)",
+        "marker-color": "#ff0000",
+        "marker-size": "large"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4212556,
+          50.0874401
+        ]
+      },
+      "properties": {
+        "title": "U Fleků",
+        "description": "Křemencova 11 // 110 00 Praha 1",
+        "city": "Praha",
+        "state": "Praha",
+        "web": null,
+        "type": "brewpub",
+        "marker-color": "#ffd700",
+        "marker-size": "small"
+      }
+    }
+  ]
+}
